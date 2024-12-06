@@ -25,37 +25,13 @@ export default {
   data() {
     return {
       matches: [
-        {
+      {
           id: 1,
-          name: "Sarah Johnson",
-          image: "https://img.freepik.com/free-photo/cheerful-young-woman-photographer-smiling_171337-9852.jpg",
-          date: "Oct 15, 2023",
-          location: "New York, NY",
-          compatibility: 95
-        },
-        {
-          id: 2,
-          name: "Michael Chen",
-          image: "https://img.freepik.com/free-photo/handsome-young-man-with-arms-crossed-white-background_23-2148222620.jpg",
-          date: "Oct 14, 2023",
-          location: "San Francisco, CA",
-          compatibility: 92
-        },
-        {
-          id: 3,
           name: "Emma Davis",
           image: "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg",
           date: "Oct 13, 2023",
           location: "Chicago, IL",
-          compatibility: 88
-        },
-        {
-          id: 4,
-          name: "James Wilson",
-          image: "https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg",
-          date: "Oct 12, 2023",
-          location: "Austin, TX",
-          compatibility: 87
+          compatibility: 95
         }
       ]
     }
@@ -73,6 +49,9 @@ export default {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-header {
@@ -87,6 +66,7 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
   padding: 1rem;
+  justify-items: center; /* Cards are centered horizontally */
 }
 
 .match-card {
@@ -95,6 +75,8 @@ export default {
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 320px; /* Limiting the width of each card */
 }
 
 .match-card:hover {
@@ -157,4 +139,4 @@ export default {
     grid-template-columns: 1fr;
   }
 }
-</style> 
+</style>

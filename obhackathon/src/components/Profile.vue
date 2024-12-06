@@ -57,9 +57,9 @@ export default {
       // Simulated profile data
       return {
         id: id,
-        name: "Sarah Johnson",
-        image: "https://img.freepik.com/free-photo/cheerful-young-woman-photographer-smiling_171337-9852.jpg",
-        location: "New York, NY",
+        name: "Emma Davis",
+        image: "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg",
+        location: "Chicago, IL",
         compatibility: 95,
         about: "Photography enthusiast and adventure seeker. Love exploring new places and capturing moments through my lens.",
         interests: ["Photography", "Travel", "Hiking", "Art", "Coffee", "Music"]
