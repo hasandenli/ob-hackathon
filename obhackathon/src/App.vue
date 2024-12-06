@@ -33,7 +33,7 @@ export default {
 
 <style>
 :root {
-  --primary-color: #FF6B6B;
+  --primary-color: #1e3a8a;
   --secondary-color: #4ECDC4;
   --background-color: #f8f9fa;
 }

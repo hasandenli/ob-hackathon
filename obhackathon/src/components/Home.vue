@@ -9,7 +9,7 @@
           </p>
           <div class="stat-badges">
             <div class="stat-badge">
-              <i class="fas fa-heart"></i>
+              <i class="fas fa-check"></i>
               <span>95% Match Accuracy</span>
             </div>
             <div class="stat-badge">
@@ -20,7 +20,7 @@
         </div>
         <div class="hero-image">
           <img 
-            src="https://img.freepik.com/free-photo/excited-man-black-denim-jacket-chilling-with-girlfriend-outdoor-portrait-happy-couple-exploring-city_197531-12259.jpg" 
+            src="https://blog.blablacar.com.tr/wp-content/uploads/2016/10/Yolculuk_Payla%C5%9F%C4%B1m%C4%B1-_Nedir.jpg" 
             alt="Happy Couple" 
             class="couple-image"
           >
@@ -29,7 +29,7 @@
     </div>
 
     <div class="personality-quiz-section">
-      <h2>10 Questions to Find True Love</h2>
+      <h2>10 Questions to Find True Road Friend</h2>
       <p class="section-subtitle">Our unique matching algorithm uses these key aspects to find your perfect match</p>
       
       <div class="question-categories">
@@ -43,10 +43,10 @@
         
         <div class="category-card">
           <div class="category-icon">
-            <i class="fas fa-heart"></i>
+            <i class="fas fa-handshake"></i>
           </div>
-          <h3>Love Language</h3>
-          <p>How you express and receive affection</p>
+          <h3>Partnership</h3>
+          <p>How you communicate and collaborate</p>
         </div>
         
         <div class="category-card">
@@ -378,7 +378,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
   color: white;
   padding: 0.8rem 1.2rem;
   border-radius: 50px;
@@ -393,6 +393,7 @@ export default {
   width: 100%;
   overflow: hidden;
   position: relative;
+  border-radius: 1rem;
 }
 
 .couple-image {
@@ -472,7 +473,7 @@ export default {
 .category-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -496,7 +497,7 @@ export default {
 }
 
 .start-quiz-btn {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
   color: white;
   border: none;
   padding: 1rem 2.5rem;
@@ -511,6 +512,7 @@ export default {
 }
 
 .start-quiz-btn:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
@@ -634,7 +636,7 @@ h2 {
 .feature-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -745,7 +747,7 @@ h2 {
 }
 
 .social-link:hover {
-  background: var(--primary-color);
+  background: #1e3a8a;
   transform: translateY(-3px);
 }
 
@@ -779,8 +781,8 @@ h2 {
 }
 
 .store-button:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
+  background: #1e3a8a;
+  border-color: #1e3a8a;
 }
 
 @media (max-width: 768px) {
@@ -863,14 +865,8 @@ h2 {
 }
 
 .floating-heart, .floating-sparkle {
-  position: absolute;
-  font-size: 2rem;
-  animation: float 3s ease-in-out infinite;
+  display: none;
 }
-
-.floating-heart:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
-.floating-heart:nth-child(2) { top: 30%; right: 20%; animation-delay: 1s; }
-.floating-sparkle { bottom: 30%; right: 30%; animation-delay: 0.5s; }
 
 .couple-text {
   padding: 0 2rem;
@@ -910,7 +906,7 @@ h2 {
 }
 
 .stat-badge {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
   color: white;
 }
 
@@ -1049,5 +1045,47 @@ h2 {
   margin-bottom: 3rem;
   font-size: 2.5rem;
   color: #333;
+}
+
+.button-icon {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-icon:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 </style> 
