@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: <your-ecr-repository-url>/survey-app:latest
+        image: 078546771783.dkr.ecr.us-east-1.amazonaws.com/survey-app:latest
         ports:
         - containerPort: 3000
         resources:
