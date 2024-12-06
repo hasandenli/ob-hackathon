@@ -6,7 +6,8 @@
       <div class="match-card" v-for="match in matches" :key="match.id">
         <img :src="match.image" :alt="match.name" class="match-image">
         <div class="match-info">
-          <h3>{{ match.name }}</h3>
+          <h3>{{ match.name }} </h3>
+          <p class="match-username">@{{ match.username }}</p>
           <p class="match-date">Matched on {{ match.date }}</p>
           <div class="match-details">
             <p><i class="fas fa-map-marker-alt"></i> {{ match.location }}</p>
@@ -28,6 +29,7 @@ export default {
       {
           id: 1,
           name: "Emma Davis",
+          username: "user_1733491487634_ao9svwijj",
           image: "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg",
           date: "Oct 13, 2023",
           location: "Chicago, IL",
@@ -103,6 +105,13 @@ export default {
   color: #666;
   font-size: 0.9rem;
   margin: 0.5rem 0;
+}
+
+.match-username {
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
 }
 
 .match-details {
