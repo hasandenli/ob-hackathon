@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myroadfriend-deployment
+  namespace: default
+  labels:
+    app: myroadfriend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myroadfriend
+  template:
+    metadata:
+      labels:
+        app: myroadfriend
+    spec:
+      containers:
+      - name: myroadfriend
+        image: your-account.dkr.ecr.region.amazonaws.com/myroadfriend:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5 
