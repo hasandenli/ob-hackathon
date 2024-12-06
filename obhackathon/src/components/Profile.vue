@@ -3,6 +3,7 @@
     <div class="profile-header">
       <img :src="matchProfile.image" :alt="matchProfile.name" class="profile-image">
       <h1>{{ matchProfile.name }}</h1>
+      <h3>@{{ matchProfile.username }}</h3>
       <div class="match-stats">
         <span class="compatibility">
           <i class="fas fa-heart"></i> {{ matchProfile.compatibility }}% Match
@@ -58,6 +59,7 @@ export default {
       return {
         id: id,
         name: "Emma Davis",
+        username: "user_1733491487634_ao9svwijj",
         image: "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg",
         location: "Chicago, IL",
         compatibility: 95,
